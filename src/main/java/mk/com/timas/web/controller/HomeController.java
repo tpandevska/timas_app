@@ -19,7 +19,6 @@ public class HomeController {
         this.categoryService = categoryService;
     }
 
-
     @GetMapping
     public String getHomePage(Model model) {
         List<Category> categories = this.categoryService.findAll();

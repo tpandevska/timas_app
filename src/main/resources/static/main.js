@@ -278,7 +278,6 @@
     });
 })(jQuery);
 
-
 $('.js-pscroll').each(function(){
     $(this).css('position','relative');
     $(this).css('overflow','hidden');
