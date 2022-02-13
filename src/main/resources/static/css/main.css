@@ -1499,8 +1499,6 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   border-color: #ccc;
 }
 
-
-
 /*//////////////////////////////////////////////////////////////////
 [ RS Magnific-Popup ]*/
 .mfp-bg {
@@ -1526,13 +1524,13 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 
 button.mfp-arrow-right {
-  background-image: url(/icons/icon-next.png);
+  background-image: url("https://api.iconify.design/grommet-icons/next.svg");
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 button.mfp-arrow-left {
-  background-image: url("icons/icon-prev.png");
+  background-image: url('https://api.iconify.design/grommet-icons/previous.svg');
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -1545,7 +1543,7 @@ button.mfp-close {
   right: 0;
   top: 0;
   color: transparent !important;
-  background-image: url("icons/icon-close.png");
+  background-image:  url('https://api.iconify.design/ep/close.svg');
   background-position: center center;
   background-repeat: no-repeat;
   cursor: pointer !important;
