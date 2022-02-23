@@ -1,1 +1,5 @@
-# e-commerce shop written in Java Spring
+# e-commerce shop
+-Java Spring
+-Postgres
+-JS
+-Bootstrap
