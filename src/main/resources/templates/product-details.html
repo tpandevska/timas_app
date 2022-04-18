@@ -74,15 +74,15 @@
           </p>
 
           <!--  -->
-          <div class="p-t-20">
+        <!--  <div class="p-t-20">
             <div class="flex-w p-b-10">
               <div class="size-203 flex-c-m respon6">
                 Size: <th:block th:text="${product.getSize()}"/>
               </div>
 
-            </div>
+            </div>-->
 
-            <div class="flex-w flex-r-m p-b-10">
+        <!--    <div class="flex-w flex-r-m p-b-10">
               <div class="size-204 flex-w flex-m respon6-next">
                 <div class="wrap-num-product flex-w m-r-20 m-tb-10">
                   <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
@@ -94,11 +94,11 @@
                   <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
                     <i class="fs-16 zmdi zmdi-plus"></i>
                   </div>
-                </div>
+                </div>-->
 
-                <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
+             <!--   <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
                   Add to cart
-                </button>
+                </button>-->
 
                <!--   <form th:action="@{'/shopping-cart/add-product/{id}' (id=${product.getId()})}"
                         th:method="POST"
@@ -122,32 +122,26 @@
       <div class="tab01">
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
+
           <li class="nav-item p-b-10">
-            <a class="nav-link active" data-toggle="tab" href="#description" role="tab">Description</a>
+            <a class="nav-link active" data-toggle="tab" href="#information" role="tab">Additional information</a>
           </li>
 
           <li class="nav-item p-b-10">
-            <a class="nav-link" data-toggle="tab" href="#information" role="tab">Additional information</a>
+            <a class="nav-link" data-toggle="tab" href="#description" role="tab">Description</a>
           </li>
 
         </ul>
 
         <!-- Tab panes -->
         <div class="tab-content p-t-43">
-          <!-- - -->
-          <div class="tab-pane fade show active" id="description" role="tabpanel">
-            <div class="how-pos2 p-lr-15-md">
-              <p class="stext-102 cl6">
-                <th:block th:text="${product.getDescription()}"/>
-            </div>
-          </div>
 
           <!-- - -->
-          <div class="tab-pane fade" id="information" role="tabpanel">
+          <div class="tab-pane fade show active" id="information" role="tabpanel">
             <div class="row">
               <div class="col-sm-10 col-md-8 col-lg-6 m-lr-auto">
                 <ul class="p-lr-28 p-lr-15-sm">
-                  <li class="flex-w flex-t p-b-7">
+                  <li class="d-flex p-b-7 justify-content-center">
                     <span class="stext-102 cl3 size-205">
                       Weight
                     </span>
@@ -155,10 +149,9 @@
                     <span class="stext-102 cl6 size-206">
                       <th:block th:text="${product.getWeight()}"/>
                     </span>
-
                   </li>
 
-                  <li class="flex-w flex-t p-b-7">
+                  <li class="d-flex p-b-7 justify-content-center">
                     <span class="stext-102 cl3 size-205">
                       Dimensions
                     </span>
@@ -168,7 +161,7 @@
                     </span>
                   </li>
 
-                  <li class="flex-w flex-t p-b-7">
+                  <li class="d-flex p-b-7 justify-content-center">
                     <span class="stext-102 cl3 size-205">
                       Materials
                     </span>
@@ -183,6 +176,17 @@
             </div>
           </div>
 
+
+          <!-- - -->
+          <div class="tab-pane fade" id="description" role="tabpanel">
+            <div class="how-pos2 p-lr-15-md">
+              <p class="stext-102 cl6">
+                <th:block th:text="${product.getDescription()}"/>
+            </div>
+          </div>
+
+
+
         </div>
       </div>
     </div>
@@ -190,11 +194,11 @@
 
   <div class="bg6 flex-c-m flex-w size-302 m-t-73 p-tb-15">
 			<span class="stext-107 cl6 p-lr-25">
-				 Code: <th:block th:text="${product.getCode()}"/>
+				 Product Code: <th:block th:text="${product.getCode()}"/>
 			</span>
 
     <span class="stext-107 cl6 p-lr-25">
-				Categories:  <th:block th:text="${product.getCategory().getName()}"/>
+				Category:  <th:block th:text="${product.getCategory().getName()}"/>
 			</span>
   </div>
 </section>

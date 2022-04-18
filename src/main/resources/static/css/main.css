@@ -3324,4 +3324,23 @@ input.num-product::-webkit-inner-spin-button {
     padding: 20px;
   }
 
+  .btn-link-categories {
+    text-decoration: none;
+    text-underline: none;
+  }
+
+  .mapouter {
+    text-align:center;
+    justify-content: center;
+    height:363px;
+    width:100%;
+  }
+
+  #gmap_canvas {
+    overflow: auto;
+    background:none!important;
+    height:363px;
+    width:100%;
+  }
+
 }

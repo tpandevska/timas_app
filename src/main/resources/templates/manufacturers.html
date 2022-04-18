@@ -1,5 +1,5 @@
 <div xmlns:th="http://www.thymeleaf.org">
-    <section class="jumbotron text-center">
+    <section class="jumbotron text-center m-t-5">
         <div class="container">
             <h3 class="jumbotron-heading">All manufacturers</h3>
         </div>
@@ -31,16 +31,16 @@
                                     <form th:action="@{'/manufacturers/delete/{id}' (id=${manufacturer.getId()})}"
                                           th:method="DELETE">
                                         <button type="submit"
-                                                class="btn btn-sm btn-danger delete-product">
-                                            <i class="fa fa-trash">Delete</i>
+                                                class="btn btn-sm fa fa-trash m-b-5 btn-danger delete-product">
+                                             Delete
                                         </button>
                                     </form>
 
                                 </th:block>
                                 <th:block sec:authorize="hasRole('ROLE_ADMIN')">
                                     <a th:href="@{'/manufacturers/edit-form/{id}' (id=${manufacturer.getId()})}"
-                                       class="btn btn-sm btn-info edit-product">
-                                        <i class="fa fa-trash">Edit</i>
+                                       class="btn btn-sm btn-info fa fa-edit m-b-5 edit-product">
+                                         Edit
                                     </a>
                                 </th:block>
 
