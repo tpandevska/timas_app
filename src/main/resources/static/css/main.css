@@ -3342,5 +3342,8 @@ input.num-product::-webkit-inner-spin-button {
     height:363px;
     width:100%;
   }
+}
 
+.product {
+  display: none;
 }

@@ -2,6 +2,8 @@
   <h3 th:if="${hasError}" th:text="${error}"></h3>
 </div>
 
+
+
 <!-- Product -->
 <div class="bg0 m-t-40 p-b-140" xmlns:th="http://www.thymeleaf.org">
   <div class="container">
@@ -41,11 +43,10 @@
         </div>
       </div>
 
-
     <div class="isotope-grid" id="productsDiv">
       <th:block th:if="${productsByCategory} != null">
           <th:block th:each="product1 : ${productsByCategory}">
-            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item" id="prd" th:classappend="${product1.getCategory().getName()}">
+            <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item product" th:classappend="${product1.getCategory().getName()}">
               <div class="block2">
                 <div class="block2-pic hov-img0">
                   <img th:src="${product1.getImageBase64()}" class="imgs" alt="PRODUCT-IMG">
@@ -67,10 +68,10 @@
 
       <th:block th:if="${productsByCategory} == null">
         <th:block th:each="product : ${products}">
-          <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item" id="prd" th:classappend="${product.getCategory().getName()}">
+          <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item product" th:classappend="${product.getCategory().getName()}">
             <div class="block2">
               <div class="block2-pic hov-img0">
-                <img th:src="${product.getImageBase64()}"  id="imgs" alt="PRODUCT-IMG">
+                <img th:src="${product.getImageBase64()}" id="imgs" alt="PRODUCT-IMG" style="min-height:210px;width:100%;">
               </div>
 
               <div class="block2-txt flex-w flex-t p-t-14">

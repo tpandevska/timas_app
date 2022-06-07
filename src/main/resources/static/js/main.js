@@ -190,8 +190,6 @@
     });
 
 
-
-
     /*==================================================================
     [ Cart ]*/
     $('.js-show-cart').on('click',function(){
@@ -349,11 +347,26 @@ $(".js-select2").each(function(){
 $(document).ready(function(){
     $("#myInput").on("keyup", function() {
         let value = $(this).val().toLowerCase();
-         $("#productsDiv #prd").filter(function() {
+         $("#productsDiv .product").filter(function() {
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
             $("#btn2").click();
         });
         });
+
+    $(".product").slice(0, 12).show();
+    $("#btn2").click();
+    if ($(".product:hidden").length != 0) {
+        $("#loadMore").show();
+    }
+
+    $("#loadMore").on('click', function(e) {
+        e.preventDefault();
+        $(".product:hidden").slice(0, 12).slideDown();
+        $("#btn2").click();
+        if ($(".product:hidden").length == 0) {
+            $("#loadMore").fadeOut('slow');
+        }
+    });
 
     });
 
